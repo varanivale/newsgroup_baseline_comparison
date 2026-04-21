@@ -1,0 +1,38 @@
+======================================================================
+NEWSGROUP BASELINE COMPARISON
+======================================================================
+
+Loading 20 newsgroups dataset (all categories)...
+Loaded 18846 documents across 20 categories
+Splitting data (80/20 train/test)...
+Train set: 15076, Test set: 3770
+
+======================================================================
+TRAINING PIPELINES
+======================================================================
+
+[1/4] Count + MultinomialNB...
+[2/4] Count + LogisticRegression...
+[3/4] TFIDF + MultinomialNB...
+[4/4] TFIDF + LinearSVC...
+
+======================================================================
+RESULTS
+======================================================================
+
+                  Pipeline  Accuracy  Macro F1  Training Time (s)
+     Count + MultinomialNB  0.620159  0.592108           0.819235
+Count + LogisticRegression  0.678515  0.672219         110.318288
+     TFIDF + MultinomialNB  0.683820  0.658211           1.006742
+         TFIDF + LinearSVC  0.770557  0.763197           1.770177
+
+======================================================================
+SUMMARY
+======================================================================
+
+Best performing pipeline: TFIDF + LinearSVC
+  Accuracy: 0.7706
+  Macro F1: 0.7632
+
+Total documents processed: 18846
+Test set size: 3770 documents
